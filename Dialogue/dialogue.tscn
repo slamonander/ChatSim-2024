@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2rpxvedwpqv2"]
+
+[ext_resource type="Texture2D" uid="uid://dtljodxtg36ua" path="res://art/blue chatbox.png" id="1_3k14p"]
+[ext_resource type="Script" path="res://Dialogue/dialogue.gd" id="1_5oro8"]
+
+[node name="Dialogue" type="CanvasLayer"]
+script = ExtResource("1_5oro8")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_left = 80.0
+offset_top = 74.0
+offset_right = 403.0
+offset_bottom = 221.0
+texture = ExtResource("1_3k14p")
+region_rect = Rect2(0, 0, 325, 325)
+
+[node name="Chat" type="RichTextLabel" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 16.0
+offset_right = 310.0
+offset_bottom = 132.0
+text = "Chatting..."
