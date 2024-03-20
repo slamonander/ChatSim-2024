@@ -1,0 +1,14 @@
+~ start
+
+Fish: hey!
+Fish: what's up cat?
+
+- nothing much
+	Fish: nothing new or anything?
+	=> END
+- good
+	Fish: nice, nice
+	=> END
+	
+
+=> END

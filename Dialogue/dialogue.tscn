@@ -5,14 +5,16 @@
 
 [node name="Dialogue" type="CanvasLayer"]
 script = ExtResource("1_5oro8")
+chatFile = "res://Dialogue/json/chat.json"
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-offset_left = 80.0
-offset_top = 74.0
-offset_right = 403.0
-offset_bottom = 221.0
+offset_left = 77.0
+offset_top = 65.0
+offset_right = 400.0
+offset_bottom = 212.0
 texture = ExtResource("1_3k14p")
 region_rect = Rect2(0, 0, 325, 325)
+metadata/_edit_group_ = true
 
 [node name="Chat" type="RichTextLabel" parent="NinePatchRect"]
 layout_mode = 0
