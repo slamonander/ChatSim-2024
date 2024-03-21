@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cwfx1dnbp5qx7"
+path="res://.godot/imported/chat.dialogue-44daeed088d3d7a3efe97a17f8d6d79f.tres"
+
+[deps]
+
+source_file="res://Dialogue/chat.dialogue"
+dest_files=["res://.godot/imported/chat.dialogue-44daeed088d3d7a3efe97a17f8d6d79f.tres"]
+
+[params]
+
+defaults=true

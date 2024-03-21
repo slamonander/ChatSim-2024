@@ -1,34 +1,40 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2rpxvedwpqv2"]
+[gd_scene load_steps=5 format=3 uid="uid://d2rpxvedwpqv2"]
 
 [ext_resource type="Texture2D" uid="uid://dtljodxtg36ua" path="res://art/blue chatbox.png" id="1_3k14p"]
-[ext_resource type="Script" path="res://Dialogue/dialogue.gd" id="1_5oro8"]
+[ext_resource type="Script" path="res://Dialogue/chat.gd" id="1_76ven"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_label.gd" id="3_cfkad"]
 [ext_resource type="FontFile" uid="uid://chb668qcpimwa" path="res://Dialogue/SF-Pro-Display-Medium.otf" id="3_n3f0c"]
 
-[node name="Dialogue" type="CanvasLayer"]
-script = ExtResource("1_5oro8")
-chatFile = "res://Dialogue/json/chat.json"
+[node name="Chatbox" type="MarginContainer"]
+offset_right = 229.0
+offset_bottom = 197.0
+script = ExtResource("1_76ven")
 
-[node name="NinePatchRect" type="NinePatchRect" parent="."]
-offset_left = 1.0
-offset_right = 40.0
-offset_bottom = 38.0
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+layout_mode = 2
 texture = ExtResource("1_3k14p")
 region_rect = Rect2(0, 0, 325, 325)
 patch_margin_left = 112
-patch_margin_top = 112
+patch_margin_top = 96
 patch_margin_right = 117
-patch_margin_bottom = 117
-metadata/_edit_group_ = true
+patch_margin_bottom = 101
 
-[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect"]
-offset_left = 4.0
-offset_top = 5.0
-offset_right = 33.0
-offset_bottom = 32.0
-metadata/_edit_group_ = true
-
-[node name="Label" type="Label" parent="NinePatchRect/MarginContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Label" type="Label" parent="MarginContainer2"]
+visible = false
+layout_mode = 2
 theme_override_fonts/font = ExtResource("3_n3f0c")
+theme_override_font_sizes/font_size = 45
 vertical_alignment = 1
+justification_flags = 160
+
+[node name="DialogueLabel" type="RichTextLabel" parent="MarginContainer2"]
+layout_mode = 2
+script = ExtResource("3_cfkad")
+skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")

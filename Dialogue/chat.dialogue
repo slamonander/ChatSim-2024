@@ -1,0 +1,11 @@
+~ START
+
+Fish: heya!
+Fish: how are things for ya
+- good
+	Fish: that's good!
+	=> START
+- alright
+	Fish: damn, everything alright?
+
+=> END
